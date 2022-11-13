@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -31,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
         psegundoonao.setImageResource(R.drawable.branco);
     }
     public void clickBotao3(View view){
-        ImageView eusabia = findViewById(R.id.eusabia);
+        ImageView eusabia = new ImageView(getApplicationContext());//findViewById(R.id.eusabia);
         eusabia.setImageResource(R.drawable.eusabia);
-}}
+        //Toast.makeText(this, "Eu sabia", Toast.LENGTH_SHORT).show();
+        Toast toast = new Toast(getApplicationContext());
+        toast.setView(eusabia);
+        toast.show();
+    }
+    }
